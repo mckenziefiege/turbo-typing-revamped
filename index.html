@@ -10,34 +10,36 @@
 
   <body>
     <div class="background">
-    <h1 class="header-primary">Turbo Typing</h1>
-
+    <h1 class="header-primary">turbo typing</h1>
     <div class="modal">
       <div class="rules">
         <div class="rules__section">
-          <h2 class="header-secondary">Rules</h2>
-            - Backspace disabled: If you make a mistake, move forward<br>
-            - Blue words are the words you need to type<br>
-            - Words spelled correctly turn gray<br>
-            - Incorrect words turn red<br>
+          <h2 class="header-secondary">rules</h2>
+            1. Backspace disabled: If you make a mistake, move forward<br>
+            2. Blue words are the words you need to type<br>
+            3. Words spelled correctly turn gray<br>
+            4. Incorrect words turn red<br>
         </div>
         <div class="rules__section">
-          Username<br>
+          <h2 class="header-secondary">new game</h2>
+          Username
           <input id="username" type="text" name="username" placeholder= "enter username..."><br>
-          Difficulty<br>
+          Difficulty
           <select id="difficulty" class="difficulty" name="difficulty">
             <option value="easy">Easy</option>
             <option value="medium">Medium</option>
             <option value="difficult">Difficult</option>
           </select><br>
-          <button id="start-game-button" name="submit" >Start</button>
+          <div class="button-container">
+            <button id="start-game-button" class="button" name="submit" >Start</button>
+          </div>
         </div>
       </div>
     </div>
 
 
     <div class="modal-alert">
-      <button class="play-again" type="button" name="reload">Play Again</button>
+      <button class="play-again button" type="button" name="reload">Play Again</button>
     </div>
 
     <div class="container">
