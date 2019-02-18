@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10/16px = 62.5%
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.8rem;
+}
+
+.header {
+  font-family: 'Special Elite', cursive;
+}
