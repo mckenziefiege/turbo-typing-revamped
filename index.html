@@ -9,24 +9,32 @@
   </head>
 
   <body>
-    <h1 class="header">Turbo Typing</h1>
+    <div class="background">
+    <h1 class="header-primary">Turbo Typing</h1>
 
     <div class="modal">
-      <p>Guidelines of Turbo Typing:
-      1. No deleting. If you make a mistake, move forward.
-      2. Blue words are the words you need to type.
-      3. Words spelled correctly turn gray.
-      4. Incorrect words turn red.
-      5. Have fun!</p>
-      Username <input id="username" type="text" name="username" placeholder= "enter username...">
-      Difficulty
-      <select id="difficulty" class="difficulty" name="difficulty">
-        <option value="easy">Easy</option>
-        <option value="medium">Medium</option>
-        <option value="difficult">Difficult</option>
-      </select>
-      <button id="start-game-button" name="submit" >Start</button>
+      <div class="rules">
+        <div class="rules__section">
+          <h2 class="header-secondary">Rules</h2>
+            - Backspace disabled: If you make a mistake, move forward<br>
+            - Blue words are the words you need to type<br>
+            - Words spelled correctly turn gray<br>
+            - Incorrect words turn red<br>
+        </div>
+        <div class="rules__section">
+          Username<br>
+          <input id="username" type="text" name="username" placeholder= "enter username..."><br>
+          Difficulty<br>
+          <select id="difficulty" class="difficulty" name="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="difficult">Difficult</option>
+          </select><br>
+          <button id="start-game-button" name="submit" >Start</button>
+        </div>
+      </div>
     </div>
+
 
     <div class="modal-alert">
       <button class="play-again" type="button" name="reload">Play Again</button>
@@ -47,6 +55,7 @@
         <p class="incorrect-number"></p>
       </div>
     </div>
+  </div>
 
     <script src="./src/index.js" type="text/javascript"></script>
   </body>
