@@ -1,63 +1,53 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
   <head>
     <meta charset="utf-8">
+    <link rel="shortcut icon" href="./images/icons8-typewriter-with-paper-50.png" />
     <link rel="stylesheet" href="./src/index.css">
-    <title></title>
+    <title>Turbo Typing</title>
   </head>
-  <body>
-      <h1>Turbo Typing</h1>
-    <!-- <div id="myModal" class="modal"> -->
-    <div class="modal-content">
-          <b>Guidelines of Turbo Typing:</b><br>
-          1. No deleting. If you make a mistake, move forward. <br>
-          2. Blue words are the words you need to type. <br>
-          3. Words spelled correctly turn gray. <br>
-          4. Incorrect words turn red.<br>
-          5. Have fun! <br>
 
-          Username: <input id="username" type="text" name="username" placeholder= "enter username...">
-          Choose Level:
-          <select id="difficulty" class="difficulty" name="difficulty">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="difficult">Difficult</option>
-          </select>
-          <button id="start-game-button" name="submit" >Start Game</button>
-      </div>
+  <body>
+    <h1 class="header">Turbo Typing</h1>
+
+    <div class="modal">
+      <p>Guidelines of Turbo Typing:
+      1. No deleting. If you make a mistake, move forward.
+      2. Blue words are the words you need to type.
+      3. Words spelled correctly turn gray.
+      4. Incorrect words turn red.
+      5. Have fun!</p>
+      Username <input id="username" type="text" name="username" placeholder= "enter username...">
+      Difficulty
+      <select id="difficulty" class="difficulty" name="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="difficult">Difficult</option>
+      </select>
+      <button id="start-game-button" name="submit" >Start</button>
+    </div>
 
     <div class="modal-alert">
       <button class="play-again" type="button" name="reload">Play Again</button>
     </div>
 
-  <div class="container">
-
-  <div class="row">
-    <div class= "column">
+    <div class="container">
       <div class="prompt-div"></div>
       <div id="user-textbox" placeholder="Click and type here..." contenteditable="true"></div>
-    </div>
-
-    <div class="column">
       <div id="safeTimerDisplay">
         Timer:
       </div>
-
       <div class="correct-score-div">
         <p>Correct: </p>
         <p class="correct-number"></p>
       </div>
-
       <div class="incorrect-score-div">
         <p>Incorrect: </p>
         <p class="incorrect-number"></p>
       </div>
-
-      <!-- <button class="play-again" type="button" name="reload">Play Again</button> -->
     </div>
-  </div>
-</div>
-<script src="./src/index.js" type="text/javascript">
-</script>
+
+    <script src="./src/index.js" type="text/javascript"></script>
   </body>
 </html>
