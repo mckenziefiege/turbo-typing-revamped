@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function timer () {
 
     userTextbox.removeEventListener('focus', timer)
-    var sec = 60;
+    var sec = 1;
     var timer = setInterval(function () {
       document.getElementById('safeTimerDisplay').innerHTML = sec;
       sec--;
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const alert = document.createElement('div')
             alert.className = "modal-content"
             alert.innerHTML = `<p>Time's up! Words Per Minute: ${score} <br>
-            High Score: ${highScore}</p>`
+            HIGH SCORE: ${highScore}</p>`
             modalAlert.append(alert)
             gameDiv.style.display = 'none';
             modalAlert.style.display = 'block';

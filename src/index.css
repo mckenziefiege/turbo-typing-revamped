@@ -25,6 +25,7 @@ body {
 
 .background {
   background-image: url("https://images.unsplash.com/photo-1519120443186-4620c77c7130?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2819&q=80");
+  position: relative;
   height: 95vh;
   background-size: cover;
   box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, .2);
@@ -63,8 +64,36 @@ body {
   padding: 6rem;
   margin: 5rem;
   box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, .2);
-  border-radius: .5rem;
   line-height: 3.5rem;
+}
+
+.rules__item {
+  margin: 1.5rem;
+}
+
+.rules__section input {
+  font-family: inherit;
+  font-size: 1.5rem;
+  padding: .5rem;
+  border-radius: 100px;
+  border: 1px solid;
+  border-color: #ccc;
+  width: 65%;
+}
+
+.rules_section input:focus {
+  outline: none;
+}
+
+.difficulty {
+  padding: .5rem;
+  font-family: inherit;
+  font-size: 1.5rem;
+  background-color: white;
+  border: 1px solid;
+  border-color: #ccc;
+  border-radius: 100px;
+  width: 60%;
 }
 
 .button-container {
@@ -76,21 +105,56 @@ body {
   font-size: 1.5rem;
   font-family: 'Lora', serif;
   text-transform: uppercase;
+  border: none;
   margin: 1rem;
   border-radius: 1rem;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.button:hover {
+  transform: translateY(-.35rem) scale(1.05);
 }
 
 .container {
-  z-index: 1;
+  margin: 5rem;
+}
+
+.items {
+  padding: 2rem;
+  margin-left: 2rem;
+  display: inline-block;
   background-color: white;
+  box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, .2);
+}
+
+.time-and-scores {
+  width: 50vw;
+}
+
+#user-textbox {
+  background-color: white;
+
+  box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, .2);
+  margin-left: 2rem;
+  margin: 2rem;
 }
 
 .prompt-div {
+  background-color: white;
   padding: 3rem;
   margin: 2rem;
+
+  display: inline-block;
+  box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, .2);
 }
 
 .prompt-div span {
   margin: .2rem;
   display: inline-block;
+}
+
+.modal-alert {
+  background-color: white;
+  box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, .2);
 }
