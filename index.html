@@ -13,27 +13,27 @@
     <h1 class="header-primary">turbo typing</h1>
     <div class="modal">
       <div class="rules">
-        <div class="rules__section">
+        <div class="rules__item">
           <h2 class="header-secondary">rules</h2>
             1. Backspace disabled: If you make a mistake, move forward<br>
             2. Blue words are the words you need to type<br>
             3. Words spelled correctly turn gray<br>
             4. Incorrect words turn red<br>
-        </div class="rules__item">
-        <div class="rules__section">
-          <h2 class="header-secondary">new game</h2>
-          <div>
-          Username
-          <input id="username" type="text" name="username" placeholder= "enter username..."><br>
         </div>
         <div class="rules__item">
+          <h2 class="header-secondary">new game</h2>
+
+          Username
+          <input id="username" type="text" name="username" placeholder= "enter username..."><br>
+
+
           Difficulty
           <select id="difficulty" class="difficulty" name="difficulty">
             <option value="easy">Easy</option>
             <option value="medium">Medium</option>
             <option value="difficult">Difficult</option>
           </select><br>
-        </div>
+
           <div class="button-container">
             <button id="start-game-button" class="button" name="submit" >Start</button>
           </div>
@@ -46,17 +46,20 @@
     </div>
 
     <div class="container">
-
           <div class="time-and-scores">
             <div id="safeTimerDisplay" class="items">
-              Timer:
+              Timer
             </div>
             <div class="correct-score-div items">
-              <p>Correct: </p>
+              <p>Correct</p>
               <p class="correct-number"></p>
             </div>
             <div class="incorrect-score-div items">
-              <p>Incorrect: </p>
+              <p>
+                <svg class="icon">
+                  <use xlink:href="images/#icon-check"></use>
+                </svg>
+              </p>
               <p class="incorrect-number"></p>
             </div>
           </div>
