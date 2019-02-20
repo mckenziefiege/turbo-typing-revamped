@@ -12,15 +12,20 @@
   box-sizing: inherit;
 }
 
+*:focus {
+    outline: none;
+}
+
 html {
   box-sizing: border-box;
-  font-size: 62.5%; // 1rem = 10px, 10/16px = 62.5%
+  font-size: 62.5%; // 1rem = 10px, 10/16px = 62.5%;
 }
 
 body {
   padding: 1.5rem;
   font-family: 'Lora', serif;
   font-size: 1.8rem;
+  color: 	#484848;
 }
 
 .background {
@@ -46,7 +51,6 @@ body {
   flex-direction: row;
   justify-content: center;
   align-content: center;
-
 }
 
 .header-secondary {
@@ -59,26 +63,32 @@ body {
   margin-top: -2rem;
 }
 
-.rules__section {
-  background: white;
-  padding: 6rem;
-  margin: 5rem;
-  box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, .2);
-  line-height: 3.5rem;
-}
+/* .rules__section {
+  display: flex;
+} */
 
-.rules__item {
-  margin: 1.5rem;
-}
-
-.rules__section input {
+.rules__item input {
   font-family: inherit;
   font-size: 1.5rem;
   padding: .5rem;
   border-radius: 100px;
   border: 1px solid;
   border-color: #ccc;
+  width: 60%;
+  transition: all .3s;
+}
+
+.rules__item input:focus {
   width: 65%;
+}
+
+.rules__item {
+  line-height: 3.5rem;
+  padding: 6rem;
+  margin: 4rem;
+  background-color:	white;
+  box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, .2);
+  border-radius: 2px;
 }
 
 .rules_section input:focus {
@@ -101,15 +111,19 @@ body {
 }
 
 .button {
+  backface-visibility: hidden;
+  color: white;
   padding: .5rem 1rem;
   font-size: 1.5rem;
   font-family: 'Lora', serif;
   text-transform: uppercase;
   border: none;
-  margin: 1rem;
-  border-radius: 1rem;
+  margin: 1.5rem;
+  border-radius: 1px;
   cursor: pointer;
   transition: all .2s;
+  background-color: rgba(117, 142, 123, .8);
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, .2);
 }
 
 .button:hover {
@@ -134,17 +148,27 @@ body {
 
 #user-textbox {
   background-color: white;
-
   box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, .2);
   margin-left: 2rem;
-  margin: 2rem;
+  margin: 1.5rem;
+  padding: 3rem;
+}
+
+#user-textbox[placeholder]:empty:before{
+  content: attr(placeholder);
+  opacity: 0.8;
+}
+
+.icon {
+    width: 1.75rem;
+       height: 1.75rem;
+       margin-right: 2rem;
 }
 
 .prompt-div {
   background-color: white;
   padding: 3rem;
   margin: 2rem;
-
   display: inline-block;
   box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, .2);
 }
@@ -155,6 +179,20 @@ body {
 }
 
 .modal-alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-again {
+  text-align: center;
+}
+
+.modal-content {
+  text-align: center;
+  width: 45%;
+  padding: 8rem;
   background-color: white;
   box-shadow: 0 2rem 1.5rem rgba(0, 0, 0, .2);
+  align-self: center;
 }
