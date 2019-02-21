@@ -3,29 +3,29 @@
 
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="shortcut icon" href="./images/icons8-typewriter-with-paper-50.png" />
     <link rel="stylesheet" href="./src/index.css">
     <title>Turbo Typing</title>
   </head>
 
   <body>
-    <div class="background">
+
     <h1 class="header-primary">turbo typing</h1>
     <div class="modal">
       <div class="rules">
         <div class="rules__item">
-          <h2 class="header-secondary">rules</h2>
+          <h2 class="header-secondary">guidelines</h2>
             1. Backspace disabled: If you make a mistake, move forward<br>
-            2. Blue words are the words you need to type<br>
-            3. Words spelled correctly turn gray<br>
-            4. Incorrect words turn red<br>
+            2. <p class="blue-word">Blue</p> words: Need to type<br>
+            3. <p class="gray-word">Gray</p> words: Typed correctly<br>
+            4. <p class="red-word">Red</p> words: Typed incorrectly<br>
         </div>
         <div class="rules__item">
           <h2 class="header-secondary">new game</h2>
 
           Username
           <input id="username" type="text" name="username" placeholder= "enter username..."><br>
-
 
           Difficulty
           <select id="difficulty" class="difficulty" name="difficulty">
@@ -42,24 +42,20 @@
     </div>
 
     <div class="modal-alert">
-      <button class="play-again button" type="button" name="reload">Play Again</button>
+        <button class="play-again button" type="button" name="reload">Play Again</button>
     </div>
 
     <div class="container">
           <div class="time-and-scores">
             <div id="safeTimerDisplay" class="items">
-              Timer
+              <i class="far fa-clock"></i>
             </div>
             <div class="correct-score-div items">
-              <p>Correct</p>
+              <i class="fas fa-check"></i>
               <p class="correct-number"></p>
             </div>
             <div class="incorrect-score-div items">
-              <p>
-                <svg class="icon">
-                  <use xlink:href="images/#icon-check"></use>
-                </svg>
-              </p>
+              <i class="fas fa-times"></i>
               <p class="incorrect-number"></p>
             </div>
           </div>
