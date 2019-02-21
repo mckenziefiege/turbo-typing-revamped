@@ -138,9 +138,9 @@ document.addEventListener('DOMContentLoaded', () => {
   function timer () {
 
     userTextbox.removeEventListener('focus', timer)
-    var sec = 1;
+    var sec = 60;
     var timer = setInterval(function () {
-      document.getElementById('safeTimerDisplay').innerHTML = sec;
+      document.getElementById('safeTimerDisplay').innerHTML = `<i class="far fa-clock"></i> ${sec}`;
       sec--;
       if (sec < 0) {
         clearInterval(timer);
@@ -151,8 +151,8 @@ document.addEventListener('DOMContentLoaded', () => {
           if (score > highScore) {
             const alert = document.createElement('div')
             alert.className = "modal-content"
-            alert.innerHTML = `<p>Time's up! Words Per Minute: ${score} <br>
-            New High Score: ${score}!</p>`
+            alert.innerHTML = `<div class="words">Time's up! Words Per Minute: ${score} <br>
+            New High Score: ${score}!</div>`
             const corgi = document.createElement('img')
             corgi.src = "https://media.tenor.com/images/00223584188c63b35f8ea408e2e1052d/tenor.gif"
             alert.append(corgi)
@@ -168,8 +168,8 @@ document.addEventListener('DOMContentLoaded', () => {
           else {
             const alert = document.createElement('div')
             alert.className = "modal-content"
-            alert.innerHTML = `<p>Time's up! Words Per Minute: ${score} <br>
-            HIGH SCORE: ${highScore}</p>`
+            alert.innerHTML = `<div class="words"><p>Time's up!</p><br>Words Per Minute: ${score} <br>
+            HIGH SCORE: ${highScore}</div>`
             modalAlert.append(alert)
             gameDiv.style.display = 'none';
             modalAlert.style.display = 'block';
